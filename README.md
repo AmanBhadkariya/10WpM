@@ -1,5 +1,5 @@
 # Multiplayer typing game - 10WpM
- A multiplayer typing game in you can create room and compete typing skills with your friends
+ A multiplayer typing game in which you can create room and compete typing skills with your friends
 
 You can test your typing skills here 
 ![Screenshot 2024-10-16 202508](https://github.com/user-attachments/assets/b6f0067c-d602-47e2-977a-49dc3d0f6579)
