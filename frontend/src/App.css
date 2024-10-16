@@ -1,0 +1,15 @@
+.main-body{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+  flex-direction: row-reverse;
+  min-width: 20vw;
+  /* border: 2px solid red; */
+}
+@media (max-width:800px) {
+  .main-body{
+    flex-direction: column;
+  }
+}

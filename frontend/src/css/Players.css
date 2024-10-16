@@ -1,0 +1,239 @@
+.player-container {
+  width: 103%;
+  height: 92%;
+}
+
+.player-bar {
+  width: 95%;
+  height: 100px;
+  border-radius: 20px;
+  margin-top: 5px;
+  flex-shrink: 0;
+  background-color: #352f44;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  /* box-shadow: 2px 2px 2px 2px black; */
+  /* border: 2px solid red; */
+  margin-bottom: 5px;
+}
+.player-bar:hover {
+  width: 98%;
+  height: 120px;
+  box-shadow: 2px 2px 2px 2px black;
+}
+.all-players {
+  width: 95%;
+  max-height: 660px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: auto;
+  /* border: 2px solid cyan; */
+}
+
+.all-players-head {
+  background-color: #352f44;
+  width: 95%;
+  height: 40px;
+}
+
+.player-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14%;
+  /* height: 80%; */
+  aspect-ratio: 1 / 1;
+  margin: 6px;
+  overflow: hidden;
+  border: 2px solid #5c5470;
+  border-radius: 50%;
+}
+.player-pic img {
+  width: 80%;
+  aspect-ratio: 1 / 1;
+}
+.player-details {
+  width: 80%;
+  height: 80px;
+}
+.userText {
+  width: 95%;
+  /* border: 2px solid red; */
+}
+.players-test-text {
+  width: 100%;
+  height: 50px;
+  overflow: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  transition: 1s ease-in-out;
+  transition: 2s ease-in-out;
+}
+.players-test-text::-webkit-scrollbar {
+  display: none;
+}
+
+.players-test-text {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.click-to-copy {
+  font-size: 16px;
+  font-weight: 200;
+  margin: auto;
+  text-align: center;
+}
+.username {
+  font-weight: bolder;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+.score-box {
+  height: 25px;
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  color: #8dc6ff;
+  transition: 1s ease-in-out;
+}
+.score-box h5 {
+  margin: 0 4px 0px 0px;
+  padding: 5px;
+}
+.settings {
+  width: 30px;
+  height: 30px;
+  margin: 5px;
+  transition: 0.4s ease-in-out;
+}
+.settings:hover {
+  width: 40px;
+  height: 40px;
+  transition: 0.4s ease-in-out;
+}
+
+.username-pts {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.total-pts {
+  font-size: 14px;
+  margin-right: 7px;
+  font-family: monospace;
+  font-weight: bolder;
+}
+.notification-box {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}
+.notifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px 0px 0px 8px;
+  z-index: 1000;
+  transition: transform 0.3s ease-in-out;
+  transform-origin: bottom right;
+  overflow-y: auto;
+  color: black;
+  font-size: 10px;
+  max-height: 3px;
+  transition: 1s ease-in-out;
+}
+
+.settings-container {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 1000;
+
+}
+
+.settings-button {
+ height: 40px;
+ width: 40px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+  padding: 10px 20px;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.settings-button:hover {
+  background-color: #f8b500;
+  color: #1a1a1a;
+}
+
+.settings-panel {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  right: 0;
+  top: 100%;
+  width: 200px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  color: #1a1a1a;
+  opacity: 0; /* Initially hidden */
+  transform: scaleY(0); /* Initial height is zero */
+  transform-origin: top; /* Transition from the top */
+  transition: all 0.3s ease-in-out; 
+}
+
+.settings-panel.open {
+  opacity: 1;
+  transform: scaleY(1); 
+}
+.setting-options{
+  width: 150px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 10px;
+  box-shadow: 1px 3px 1px 3px black;
+  margin-top: 5px;
+  margin-left: 10px;
+  overflow: hidden;  
+  color: #1a1a1a;
+  color: #f1f1f1;
+  background-color: #1a1a1a;
+  font-size: 12px;
+}
+.setting-options i{
+  margin: 0px 7px 0px 7px;
+}
+.setting-options input{
+  height: 30px;
+  width: 60px;
+  background-color: #1a1a1a;
+  border: none;
+  text-align: center;
+}
+input:focus{
+  outline: none;
+  border: none;
+}
+
+.timer{
+  height: 50px;
+  font-size: 25px;
+  position: absolute;
+  right: 100px;
+  top: 20px;
+}

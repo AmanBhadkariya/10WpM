@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon app,js",
+    "start": "node app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "expess": "^0.0.1-security",
+    "express": "^4.21.0",
+    "node-fetch": "^3.3.2",
+    "nodemon": "^3.1.7",
+    "socket.io": "^4.8.0"
+  }
+}
