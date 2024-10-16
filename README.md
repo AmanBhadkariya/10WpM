@@ -10,3 +10,13 @@ You can also create rooms and share room code to your friends to play with them
 
 You can see what you friends are typing and can see who completed and their points
 ![Screenshot 2024-10-16 203116](https://github.com/user-attachments/assets/56c0dca1-e5b8-461d-9842-21aec55f7d10)
+
+
+Features to be added:
+* More amazing UI
+* Custom profiles pics for players
+* Public rooms feature
+* Round based games
+* Time limit for typing
+* Easy - Hard/Impossible Levels of text
+
