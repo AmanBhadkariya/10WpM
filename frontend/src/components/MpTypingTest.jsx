@@ -18,6 +18,28 @@ const MpTypingTest = () => {
   const [currentTime, setCurrentTime] = useState(Date.now());
   const [inroom, setinroom] = useState(false);
 
+  function randomText(wordCount) {
+    return fetch('https://baconipsum.com/api/?type=all-meat&paras=2&format=text')
+      .then(response => response.text())
+      .then(data => {
+        let paragraph = data; // Use the fetched paragraph data
+        const words = paragraph.split(/\s+/).filter(word => word); // Split paragraph into words
+        
+        let sentence = [];
+        
+        for (let i = 0; i < Math.max(wordCount, 1); i++) {
+          const randomIndex = Math.floor(Math.random() * words.length);
+          sentence.push(words[randomIndex].replace(/[^a-zA-Z]/g, '')); // Clean the word of punctuation
+        }
+        
+        return sentence.join(" "); // Return the generated sentence
+      })
+      .catch(error => {
+        console.error('Error fetching the data:', error);
+        return "Error occurred"; // Return a fallback text in case of an error
+      });
+  }
+
   useEffect(() => {
     socket.on("welcome", (text) => {
       setmainText(text);
@@ -130,6 +152,7 @@ const MpTypingTest = () => {
     setIsTestFinished(false);
     setTimeTaken(0);
     setUserAccuracy(0);
+    randomText(10).then(text => setmainText(text));
     testTextRef.current.scrollTo({
       top: 0,
       behavior: "smooth",
@@ -195,9 +218,9 @@ const MpTypingTest = () => {
         {isTestFinished && (
           <div>
             <h2>Completed!!</h2>
-            <h2>{timeTaken} WPM</h2>
-            <h3>Accuracy : {userAccuracy * 100} %</h3>
-            <h4>Time Taken: {totalTimeTaken} s</h4>
+            <h2>{Math.round(timeTaken)} WPM</h2>
+            <h3>Accuracy : { Math.round(userAccuracy * 100)} %</h3>
+            <h4>Time Taken: {Math.round(totalTimeTaken)} s</h4>
           </div>
         )}
       </div>
