@@ -9,7 +9,7 @@ const server = createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5174",
+    origin: "https://one0wpm.onrender.com",
     methods: ['GET', 'POST'],
     credentials: true,
   }
