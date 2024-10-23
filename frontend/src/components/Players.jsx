@@ -165,7 +165,8 @@ const Players = () => {
             <>
               <div key={index} className="player-bar">
                 <div className="player-pic">
-                  <img src="../src/assets/player.png" alt="np" />
+{/*                   <img src="../src/assets/player.png" alt="np" /> */}
+                  <i className="fa-regular fa-user"></i>
                 </div>
                 <div className="player-details">
                   <div className="username-pts">
