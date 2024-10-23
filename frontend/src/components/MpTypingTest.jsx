@@ -211,7 +211,7 @@ const MpTypingTest = () => {
       />
       {!inroom ? (
         <button className="retry-btn" onClick={handleRestart}>
-          <img src="../src/assets/reload1.png" alt="Retry" />
+          <i className="fa-solid fa-rotate-right"></i>
         </button>
       ) : null}
       <div className={`test-result ${isTestFinished ? "show" : ""}`}>
