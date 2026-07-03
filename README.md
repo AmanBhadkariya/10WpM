@@ -1,5 +1,6 @@
 # 10WPM — Multiplayer Typing Game
 
+<img width="2876" height="1554" alt="1" src="https://github.com/user-attachments/assets/8fee0fd6-918e-4b2e-88ad-c5106a57538f" />
 10WPM is a real-time typing game built with React, Express, and Socket.IO. Practice alone, race a group of friends in a private room, or challenge one opponent in a dedicated 1v1 duel.
 
 The interface uses an animated typing-themed background, smooth transitions, live player cards, synchronized countdowns, configurable rounds, performance results, and post-round leaderboards.
@@ -7,6 +8,7 @@ The interface uses an animated typing-themed background, smooth transitions, liv
 ## Features
 
 ### Solo practice
+<img width="2880" height="1560" alt="2" src="https://github.com/user-attachments/assets/141c52ef-5b3a-488c-a372-dc6529049023" />
 
 - Word-count and timed practice modes
 - Configurable word count
@@ -18,11 +20,16 @@ The interface uses an animated typing-themed background, smooth transitions, liv
 - Restart and generate-new-text controls
 
 ### Group multiplayer
+<img width="2874" height="1552" alt="3" src="https://github.com/user-attachments/assets/c131e53c-2c4a-45b2-814f-c38b4f53fac3" />
 
 - Create private rooms with shareable six-character codes
 - Join rooms from another browser or device
 - Live synchronized `3–2–1–GO` countdown
 - Configurable word count, round duration, and difficulty
+
+<img width="2878" height="1550" alt="4" src="https://github.com/user-attachments/assets/8999b06f-ae42-4f0e-a57c-60ecc3638851" />
+<img width="2876" height="1546" alt="7" src="https://github.com/user-attachments/assets/ba91aa88-c02b-4cff-8a7d-205368477072" />
+
 - Real-time visibility of every player's typing progress
 - Server-authoritative round timer
 - Automatic timeout results for unfinished players
@@ -31,6 +38,7 @@ The interface uses an animated typing-themed background, smooth transitions, liv
 - Host controls and automatic host transfer when the current host leaves
 
 ### 1v1 duels
+<img width="2880" height="1550" alt="10" src="https://github.com/user-attachments/assets/0b5230eb-322a-4a2e-9031-172be58e1fc9" />
 
 - Separate duel-room creation flow
 - Strict two-player room limit
@@ -38,6 +46,9 @@ The interface uses an animated typing-themed background, smooth transitions, liv
 - Side-by-side player dashboard
 - Persistent round-win score such as `1–2`
 - Dedicated duel leaderboard and live arena styling
+<img width="2880" height="1552" alt="8" src="https://github.com/user-attachments/assets/6d3384f0-4efb-4c3f-9e2f-c95aad1aa614" />
+<img width="2880" height="1556" alt="9" src="https://github.com/user-attachments/assets/4a27a018-f546-4b13-a4c7-28e5af70c8d1" />
+
 
 ### Interface
 
