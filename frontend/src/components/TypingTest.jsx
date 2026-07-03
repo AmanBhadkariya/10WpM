@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import "../css/TypingTest.css";
 
 const TypingTest = () => {
-  const [mainText, setmainText] = useState("about about about about");
+  const [mainText] = useState("about about about about");
   const [input, setInput] = useState("");
   const [startTime, setStartTime] = useState(null);
   const [isTestStarted, setIsTestStarted] = useState(false);

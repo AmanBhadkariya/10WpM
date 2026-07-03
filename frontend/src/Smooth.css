@@ -1,0 +1,73 @@
+:root { --glide: cubic-bezier(.22,.8,.28,1); }
+
+html { scroll-behavior: smooth; }
+
+button, input, select, textarea, .test-container, .multiplayer-Container,
+.player-bar, .metric, .host-controls, .leader-row {
+  transition-timing-function: var(--glide) !important;
+}
+
+.test-text { position: relative; }
+.test-text .char-current::after { display: none !important; }
+
+.glide-caret {
+  position: absolute !important;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 2px;
+  padding: 0 !important;
+  border-radius: 99px;
+  background: var(--green);
+  box-shadow: 0 0 10px var(--green);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 95ms cubic-bezier(.22,.8,.35,1), height .18s ease, opacity .16s ease !important;
+  will-change: transform;
+}
+
+.glide-caret.visible { opacity: 1; animation: glideBlink 1s step-end infinite; }
+.countdown.go { animation: goReveal .62s cubic-bezier(.2,.8,.2,1) forwards; }
+
+.live-layout .test-container {
+  animation: arenaGlide .82s cubic-bezier(.18,.8,.24,1) both;
+}
+
+.room-code-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 7px;
+  padding: 5px 8px;
+  border: 1px solid rgba(124,92,255,.25);
+  border-radius: 8px;
+  color: #b8adc9;
+  background: rgba(124,92,255,.08);
+  font-family: 'DM Mono';
+  font-size: 9px;
+  letter-spacing: .12em;
+  transition: .25s var(--glide);
+}
+
+.room-code-chip:hover {
+  color: #fff;
+  border-color: var(--accent);
+  background: rgba(124,92,255,.18);
+  transform: translateY(-1px);
+}
+
+@keyframes glideBlink { 50% { opacity: .25; } }
+@keyframes goReveal {
+  0% { opacity: 1; backdrop-filter: blur(8px); }
+  55% { opacity: .72; color: #fff; letter-spacing: .08em; }
+  100% { opacity: 0; backdrop-filter: blur(0); transform: scale(1.08); letter-spacing: .2em; }
+}
+@keyframes arenaGlide {
+  from { opacity: .58; transform: translateX(-18vw) scale(.94); }
+  65% { opacity: 1; transform: translateX(1.2vw) scale(1.01); }
+  to { transform: translateX(0) scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .glide-caret, .countdown.go, .live-layout .test-container { animation: none !important; transition: none !important; }
+}

@@ -1,5 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
+// Kept as a small reusable utility for future timed race modes.
+// eslint-disable-next-line react/prop-types
 const Timer = ({ initialSeconds }) => {
   const [seconds, setSeconds] = useState(initialSeconds);
 
