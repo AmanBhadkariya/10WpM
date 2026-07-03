@@ -270,26 +270,7 @@ Important Socket.IO events include:
 | `round-ended` | Server → client | Finish the round and publish results |
 | `leave-room` | Client → server | Leave the current room |
 
-## Production deployment
 
-### Backend
-
-Deploy the `backend/` directory to a Node.js host such as Render, Railway, Fly.io, or a virtual server.
-
-- Build command: `npm install`
-- Start command: `npm start`
-- Configure `PORT` if required by the host.
-- Add the deployed frontend origin to the Socket.IO CORS list in `backend/app.js`.
-
-### Frontend
-
-Deploy the `frontend/` directory to a static host such as Vercel, Netlify, Cloudflare Pages, or Render Static Sites.
-
-- Build command: `npm run build`
-- Output directory: `dist`
-- Environment variable: `VITE_SOCKET_URL=https://your-backend.example.com`
-
-Both deployments must use compatible HTTPS/WSS origins in production.
 
 ## Current storage limitation
 
